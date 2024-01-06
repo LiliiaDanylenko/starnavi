@@ -1,0 +1,23 @@
+@import "./utils/variables";
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $primary-color;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import "blocks/game.scss";
+@import "blocks/dropdown.scss";
+@import "blocks/field.scss";
+@import "blocks/loader.scss";
+@import "blocks/error.scss";
