@@ -16,6 +16,11 @@ body {
   box-sizing: border-box;
 }
 
+ul, li, h1 {
+  margin: 0;
+  padding: 0;
+}
+
 @import "blocks/game.scss";
 @import "blocks/dropdown.scss";
 @import "blocks/field.scss";

@@ -36,6 +36,16 @@ const Dropdown: React.FC<Props> = ({
     setIsActiveDropdown(!isActiveDropdown);
   }
 
+  const handleClick = (field: Field) => {
+    if (selectedField.id === field.id) {
+      setIsActiveDropdown(!isActiveDropdown);
+      return;
+    }
+    setSelectedField(field);
+    setIsActiveDropdown(!isActiveDropdown);
+    handleReset();
+  }
+
   return (
     <div className="game__dropdown dropdown" ref={dropdownRef} >
       <button
@@ -59,15 +69,7 @@ const Dropdown: React.FC<Props> = ({
           <div
             className={classNames("dropdown__item", { "dropdown__item--selected": field.id === selectedField.id })}
             key={field.id}
-            onClick={() => {
-              if (selectedField.id === field.id) {
-                setIsActiveDropdown(!isActiveDropdown);
-                return;
-              }
-              setSelectedField(field);
-              setIsActiveDropdown(!isActiveDropdown);
-              handleReset();
-            }}
+            onClick={() => handleClick(field)}
           >
             {field.name}
           </div>

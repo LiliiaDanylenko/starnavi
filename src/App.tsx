@@ -85,7 +85,7 @@ function App() {
       </div>
       <div>
         <h1 className="game__title">Hover squares</h1>
-        <div className="game__hovered-cells">
+        <ul className="game__hovered-cells">
           {hoveredCells.map(cell => (
             <HoveredCell
               key={cell}
@@ -93,7 +93,7 @@ function App() {
               handleDelete={handleDelete}
             />
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

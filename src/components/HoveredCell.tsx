@@ -7,12 +7,12 @@ type Props = {
 
 const HoveredCell: React.FC<Props> = ({ cell, handleDelete }) => {
   return (
-    <div key={cell} className="game__hovered-cell">
+    <li key={cell} className="game__hovered-cell">
       {cell}
       <span onClick={() => handleDelete(cell)}>
         <img src={close} alt="close" />
       </span>
-    </div>
+    </li>
   );
 };
 
